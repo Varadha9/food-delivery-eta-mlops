@@ -1,0 +1,109 @@
+{
+  "data_drift": {
+    "features": {
+      "item_count": {
+        "ks_statistic": 0.0074,
+        "ks_pvalue": 0.9782942746244692,
+        "ks_drift_detected": false,
+        "psi_value": 0.0019,
+        "psi_status": "STABLE",
+        "drift_detected": false
+      },
+      "cuisine_complexity": {
+        "ks_statistic": 0.0115,
+        "ks_pvalue": 0.660987917084872,
+        "ks_drift_detected": false,
+        "psi_value": 0.0022,
+        "psi_status": "STABLE",
+        "drift_detected": false
+      },
+      "kitchen_active_orders": {
+        "ks_statistic": 0.9339,
+        "ks_pvalue": 0.0,
+        "ks_drift_detected": true,
+        "psi_value": 9.9127,
+        "psi_status": "SIGNIFICANT_DRIFT",
+        "drift_detected": true
+      },
+      "is_peak_hour": {
+        "ks_statistic": 0.0028,
+        "ks_pvalue": 0.9999999999999997,
+        "ks_drift_detected": false,
+        "psi_value": 0.0,
+        "psi_status": "STABLE",
+        "drift_detected": false
+      },
+      "restaurant_avg_prep_min": {
+        "ks_statistic": 0.0142,
+        "ks_pvalue": 0.3917485761499332,
+        "ks_drift_detected": false,
+        "psi_value": 0.0037,
+        "psi_status": "STABLE",
+        "drift_detected": false
+      },
+      "order_value_usd": {
+        "ks_statistic": 0.0161,
+        "ks_pvalue": 0.251483888525285,
+        "ks_drift_detected": false,
+        "psi_value": 0.0027,
+        "psi_status": "STABLE",
+        "drift_detected": false
+      },
+      "distance_km": {
+        "ks_statistic": 0.0088,
+        "ks_pvalue": 0.913315064875436,
+        "ks_drift_detected": false,
+        "psi_value": 0.0007,
+        "psi_status": "STABLE",
+        "drift_detected": false
+      },
+      "traffic_density": {
+        "ks_statistic": 0.7068,
+        "ks_pvalue": 0.0,
+        "ks_drift_detected": true,
+        "psi_value": 3.8418,
+        "psi_status": "SIGNIFICANT_DRIFT",
+        "drift_detected": true
+      },
+      "rain_intensity_mm": {
+        "ks_statistic": 0.8269,
+        "ks_pvalue": 0.0,
+        "ks_drift_detected": true,
+        "psi_value": 1.6434,
+        "psi_status": "SIGNIFICANT_DRIFT",
+        "drift_detected": true
+      },
+      "rider_speed_kmh": {
+        "ks_statistic": 0.0084,
+        "ks_pvalue": 0.9408577635983326,
+        "ks_drift_detected": false,
+        "psi_value": 0.0024,
+        "psi_status": "STABLE",
+        "drift_detected": false
+      },
+      "rider_wait_time_min": {
+        "ks_statistic": 0.0176,
+        "ks_pvalue": 0.16342844716139193,
+        "ks_drift_detected": false,
+        "psi_value": 0.0011,
+        "psi_status": "STABLE",
+        "drift_detected": false
+      }
+    },
+    "total_features": 11,
+    "drifted_features_count": 3,
+    "overall_data_drift": true
+  },
+  "concept_drift": {
+    "baseline_mae": 1.7962,
+    "production_mae": 8.764,
+    "mae_degradation_ratio": 3.8792,
+    "baseline_rmse": 2.2505,
+    "production_rmse": 11.0432,
+    "rmse_degradation_ratio": 3.907,
+    "baseline_on_time_rate": 97.25,
+    "production_on_time_rate": 35.34,
+    "concept_drift_detected": true,
+    "action_required": "TRIGGER_AUTOMATED_RETRAINING"
+  }
+}

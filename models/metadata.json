@@ -1,0 +1,53 @@
+{
+  "run_id": "e57dcb31900540be83e6c2da22e36a34",
+  "created_at": "2026-11-24T13:25:35.868292",
+  "kpt_features": [
+    "item_count",
+    "cuisine_complexity",
+    "kitchen_active_orders",
+    "is_peak_hour",
+    "restaurant_avg_prep_min",
+    "order_value_usd"
+  ],
+  "vtt_features": [
+    "distance_km",
+    "traffic_density",
+    "rain_intensity_mm",
+    "rider_speed_kmh",
+    "rider_wait_time_min"
+  ],
+  "metrics": {
+    "kpt": {
+      "mae_min": 1.4434,
+      "rmse_min": 1.8104,
+      "r2_score": 0.8781,
+      "mape_percent": 6.06,
+      "asymmetric_pinball_loss": 0.7205,
+      "on_time_rate_percent": 99.28,
+      "severe_late_rate_percent": 0.28
+    },
+    "vtt": {
+      "mae_min": 1.1997,
+      "rmse_min": 1.5365,
+      "r2_score": 0.9627,
+      "mape_percent": 11.2,
+      "asymmetric_pinball_loss": 0.6039,
+      "on_time_rate_percent": 99.72,
+      "severe_late_rate_percent": 0.14
+    },
+    "total_eta": {
+      "mae_min": 1.9322,
+      "rmse_min": 2.4427,
+      "r2_score": 0.9333,
+      "mape_percent": 5.32,
+      "asymmetric_pinball_loss": 0.844,
+      "on_time_rate_percent": 95.84,
+      "severe_late_rate_percent": 1.18
+    }
+  },
+  "sla_check": {
+    "target_mae_min": 3.0,
+    "achieved_mae_min": 1.9322,
+    "passed": true
+  }
+}
